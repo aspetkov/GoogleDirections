@@ -1,0 +1,23 @@
+<div class="cmvGoogleDirections">
+    <div class="formContainer">
+        <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="googleDirectionsFormDijit">
+            <div data-dojo-attach-point="querySelectDom">
+                <label>${i18n.labels.directionsType}:</label><br/>
+                <select data-dojo-type="dijit/form/Select" data-dojo-props="name:'directionType',required:true" data-dojo-attach-point="directionsTypeSelectDijit" data-dojo-attach-event="onChange:updateMode">
+                    <option value="driving">Driving</option>
+                    <option value="walking">Walking</option>
+                    <option value="bicycling">Bicyling</option>
+                </select>
+            </div>
+        </div>
+        <div data-dojo-attach-point="queryContainsDom">
+            <input type="checkbox" data-dojo-attach-point="directionsAvoidHighways" data-dojo-type="dijit/form/CheckBox" data-dojo-props="'class':'avoidHighways'"/>
+            <label>${i18n.labels.avoidHighways}</label>
+        </div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-history fa-fw','class':'clearButton'" data-dojo-attach-event="onClick:clearDirections" data-dojo-attach-point="clearButtonDijit">
+            ${i18n.labels.clearDirections}
+        </div>
+        <div data-dojo-props="'class':'directionsResults'" data-dojo-attach-point="googleDirectionsResultsDijit"></div>
+
+    </div>
+</div>

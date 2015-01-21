@@ -1,0 +1,10 @@
+.cmvGoogleDirections {
+    padding: 5px;
+}
+
+.cmvGoogleDirections .directionResults {
+    height: 240px !important;
+    overflow: auto;
+    width:100%;
+    display: none;
+}
